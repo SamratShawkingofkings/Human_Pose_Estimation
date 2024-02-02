@@ -100,55 +100,55 @@ Human pose estimation is a computer vision task that involves detecting and esti
               #Connect Keypoints:The function connects keypoints according to predefined pairs in POSE_PAIRS and draws lines on the frame to represent the pose skeleton.
               #Display Processing Time:The processing time of the neural network inference is calculated and displayed on the frame.
 
-    estimated_img =pos_estimation(img)
-    #calling the function
-
-    
-plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
-#displaying the original image again using Matplotlib
-
-
-#for video you have to add the following code and rest of the code will be same
-cap = cv.VideoCapture("C:\\Users\\CCCIR-003\\Downloads\\Human_Pose_Estimation-main\\Human_Pose_Estimation-main\\1-Minute Yoga Practice_ Flexibility with Nathan Briner _ Yoga Anytime.mp4")
-
-cap.set(3,800)
-cap.set(4,800)
-
-if not cap.isOpened():
-    cap=cv.VideoCapture(0)
-if not cap.isOpened():
-    raise IOError("Cannot open video")
-while cv.waitKey(1)<0:
-    hasFrame,frame=cap.read()
-    if not hasFrame:
-        cv.waitKey()
-        break
-        ......
-        ......
-        cv.imshow('OpenPose using OpenCV', frame)   
-
-
-#for realtime video capture through web cam you have to add the following code and rest of the code will be same
-cap = cv.VideoCapture(0)
-
-cap.set(cv.CAP_PROP_FPS, 10)
-
-cap.set(3,800)
-cap.set(4,800)
-
-if not cap.isOpened():
-    cap=cv.VideoCapture(0)
-if not cap.isOpened():
-    raise IOError("Cannot open Webcam")
-while cv.waitKey(1)<0:
-    hasFrame,frame=cap.read()
-    if not hasFrame:
-        cv.waitKey()
-        break
-        ......
-        ......
-        cv.imshow('OpenPose using OpenCV', frame)   
-
-
-
-    
+                    estimated_img =pos_estimation(img)
+                    #calling the function
+                
+                    
+                plt.imshow(cv.cvtColor(img, cv.COLOR_BGR2RGB))
+                #displaying the original image again using Matplotlib
+                
+                
+                #for video you have to add the following code and rest of the code will be same
+                cap = cv.VideoCapture("C:\\Users\\CCCIR-003\\Downloads\\Human_Pose_Estimation-main\\Human_Pose_Estimation-main\\1-Minute Yoga Practice_ Flexibility with Nathan Briner _ Yoga Anytime.mp4")
+                
+                cap.set(3,800)
+                cap.set(4,800)
+                
+                if not cap.isOpened():
+                    cap=cv.VideoCapture(0)
+                if not cap.isOpened():
+                    raise IOError("Cannot open video")
+                while cv.waitKey(1)<0:
+                    hasFrame,frame=cap.read()
+                    if not hasFrame:
+                        cv.waitKey()
+                        break
+                        ......
+                        ......
+                        cv.imshow('OpenPose using OpenCV', frame)   
+                
+                
+                #for realtime video capture through web cam you have to add the following code and rest of the code will be same
+                cap = cv.VideoCapture(0)
+                
+                cap.set(cv.CAP_PROP_FPS, 10)
+                
+                cap.set(3,800)
+                cap.set(4,800)
+                
+                if not cap.isOpened():
+                    cap=cv.VideoCapture(0)
+                if not cap.isOpened():
+                    raise IOError("Cannot open Webcam")
+                while cv.waitKey(1)<0:
+                    hasFrame,frame=cap.read()
+                    if not hasFrame:
+                        cv.waitKey()
+                        break
+                        ......
+                        ......
+                        cv.imshow('OpenPose using OpenCV', frame)   
+                
+                
+                
+                    
